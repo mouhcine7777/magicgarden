@@ -16,7 +16,7 @@ const ExperiencesSection = () => {
       description: "Performances de danseurs lumineux",
       image: "/festival-2.webp",
       color: "from-purple-400 to-pink-500"
-    },
+    },  
     {
       title: "L'Espace Aladdin",
       description: "Mascottes et animations pour enfants",

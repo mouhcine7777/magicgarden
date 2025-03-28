@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
@@ -37,7 +37,7 @@ const MagicGardenHero = () => {
 
   return (
     <section className="relative h-screen w-full overflow-hidden bg-black text-white">
-      {/* Background image without parallax */}
+      {/* Background image */}
       <div className="absolute inset-0 z-0">
         <Image 
           src="/bg.webp"
@@ -58,28 +58,35 @@ const MagicGardenHero = () => {
           initial="hidden"
           animate={isLoaded ? "visible" : "hidden"}
         >
-          {/* Main title with glow effect */}
-          <motion.h1
-            className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl text-white mb-2 sm:mb-4 tracking-wide"
-            variants={itemVariants}
-          >
-            <span className="font-[StrangeDreams] text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-yellow-300">
-              Magic Garden
-            </span>
-            <motion.span
-              className="font-[StrangeDreams] block text-3xl sm:text-5xl md:text-6xl mt-2 text-pink-200 font-light"
-              variants={itemVariants}
-            >
-              Light Festival
-            </motion.span>
-          </motion.h1>
-
-          {/* Date and location */}
+          {/* Logo */}
           <motion.div
-            className="font-montserrat text-lg sm:text-xl md:text-2xl text-white font-light mb-6 sm:mb-8 tracking-wider"
+            className="w-64 md:w-80 lg:w-96 mb-4 sm:mb-6"
             variants={itemVariants}
           >
-            <p>Du 3 mai au 1er juin – Vélodrome de Casablanca</p>
+            <Image
+              src="/logo.webp"
+              alt="Magic Garden Light Festival"
+              width={384}
+              height={192}
+              className="w-full h-auto"
+              priority
+            />
+          </motion.div>
+
+          {/* Date and location - Styled like original title */}
+          <motion.div
+            className="text-lg sm:text-xl md:text-2xl font-light mb-6 sm:mb-8 tracking-wider"
+            variants={itemVariants}
+          >
+            <p className="font-[StrangeDreams]">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-300 to-pink-300">
+                Du 3 mai au 1er juin
+              </span>
+              <span className="text-white mx-2">|</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-200 to-cyan-200">
+                Vélodrome de Casablanca
+              </span>
+            </p>
           </motion.div>
 
           {/* Description text */}

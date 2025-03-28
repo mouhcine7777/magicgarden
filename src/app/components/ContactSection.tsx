@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
 import { motion } from 'framer-motion';
-import { Envelope, MapPin, Calendar, InstagramLogo, FacebookLogo, TwitterLogo } from 'phosphor-react';
+import { Envelope, MapPin, Calendar, InstagramLogo, FacebookLogo} from 'phosphor-react';
 
 const ContactSection = () => {
   return (

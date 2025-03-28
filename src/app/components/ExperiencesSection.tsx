@@ -20,7 +20,7 @@ const ExperiencesSection = () => {
     {
       title: "L'Espace Aladdin",
       description: "Mascottes et animations pour enfants",
-      image: "/festival-3.webp",
+      image: "/festival-4.webp",
       color: "from-blue-400 to-teal-400"
     },
     {
